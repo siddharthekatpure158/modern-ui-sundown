@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundown Studio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <style>
+      @font-face {
+        font-family: 'new';
+        src: url(./NeueHaasDisplayMediu.ttf);
+      }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'new', Arial, sans-serif;
+        }
+        body{
+          height: 100%;
+          width: 100%;
+        }
+       
+        .page1{
+          min-height: 100vh;
+          width: 100%;
+          background-color:#EFEAE3;
+          position: relative;
+          padding: 0 2vw;
+          overflow: hidden;
+        }
+        .navbar{
+          height: 15%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .navbar img{
+          margin-top: 20px;
+        }
+        .sect{
+          display: flex;
+          gap: 10px;
+          font-size: 20px;
+        }
+        .sect h4{
+          padding: 5px 15px;
+          border: 1px solid rgba(57, 54, 54, 0.442);
+          border-radius: 2rem;
+          color:rgb(49, 42, 42);
+          position: relative;
+          overflow: hidden;
+        }
+        .sect h4 a{
+          text-decoration: none;
+          color: #000000bb;
+          position: relative;
+          z-index: 9;
+          transition: all ease 1s;
+        }
+        .sect h4::after{
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -100%;
+          background-color: black;
+          height: 100%;
+          width: 100%;
+          transition: all .3s ease-in;
+          border-radius: 90%;
+        }
+        .sect h4:hover::after{
+          border-radius: 10%;
+          bottom: 0;
+        }
+        .sect h4:hover a{
+          color: white;
+        }
+       .center{
+        height:70vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        border-bottom: 1px solid #00000054;
+        padding-bottom: 30px;
+       }
+       .left{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: end;
+       }
+       .right{
+        height: 100%;
+        width: 30%;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+       }
+       
+       .center .left h3{
+        width: 25vw;
+        font-size: 1.8vw;
+        line-height: 2vw;
+       }
+       .center .right h1{
+        text-align: right;
+        line-height: 8vw;
+        font-size: 10vw;
+       }
+       .page1 video{
+        margin-top: 5vh;
+        width: 100%;
+        border-radius:30px;
+        position: relative;
+       }
+        
+     #move{
+      position: absolute;
+      width: 45vw;
+      height: 50vh;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      background-color: #FE350A;
+      animation: move 5s linear infinite alternate;
+      right: 0;
+      top: 75vh;
+      filter: blur(100px);
+      transition: all 3s ease-in;
+      z-index: 0;
+     }
+     
+    
+     @keyframes move {
+      from{
+        transform: translate(-10%);
+      }
+       to{
+        transform: translate(10%,-20%);
+      }
+     }
+     .page2{
+          min-height: 100vh;
+          width: 100vw;
+          background-color:#EFEAE3;
+          padding-top: 2.5vh;
+        }
+    
+        .moving-text{
+           white-space: nowrap;
+           overflow-x: auto;
+        }
+        @keyframes move2 {
+      from{
+        transform: translateX(0%);
+      }
+      to{
+        transform: translateX(-100%);
+      }
+    }
+        .moving-text::-webkit-scrollbar{
+          display: none;
+        }
+     #con{
+      white-space: nowrap;
+        display: inline-block;
+        animation-name: move2;
+           animation-duration: 10s;
+           animation-iteration-count: infinite;
+           animation-timing-function: linear;
+     }
+
+     .moving-text h1{
+      display: inline-block;
+      font-size:9vw;
+      text-transform: uppercase;
+     }
+    #gola{
+      height: 5vw;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: #FE350A;
+      display: inline-block;
+      margin: 1vw 2vw;
+    }
+    .lower{
+      height:70vh;
+      width: 100vw;
+      justify-content: space-between;
+      display: flex;
+      position: absolute;
+    }
+   .lower .left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+   }
+   .lower h1{
+    padding-left: 5vw;
+    width: 100%;
+    font-size: 8vh;
+    font-weight:bolder;
+   }
+   .lower .right{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+   }
+   .right img{
+    width: 25vw;
+    background-size: cover;
+    border-radius: 15px;
+   }
+   .right p{
+    width: 24vw;
+    font-size: 15px;
+    font-weight: 100;
+   }
+    
+   
+  .page3{
+          min-height: 100vh;
+          width: 100vw;
+          background-color:#EFEAE3;
+  }
+  #move3{
+      position: absolute;
+      width: 70vh;
+      height: 65vh;
+      border-radius: 50%;
+      background-color: #FE350A;
+      animation: move3 5s linear infinite alternate;
+      left: 20vw;
+      top: 40vh;
+      filter: blur(60px);
+      transition: all 3s ease-in;
+      z-index: 0;
+     }
+     
+    
+     @keyframes move3 {
+      from{
+        transform: translate(-10%);
+      }
+       to{
+        transform: translate(10%,-20%);
+      }
+     }
+
+     .page3 h1{
+      font-size: 3vw;
+      position: absolute;
+      padding-left: 30px;
+      z-index: 9;
+      transition: all ease 1s;
+     }
+     
+     .page3 .box1, .page3 .box2, .page3 .box3, 
+     .page3 .box4, .page3 .box5, .page3 .box6{
+      height: 20vh;
+      width: 100%;
+      display: flex;
+      border:1px solid rgba(170, 144, 144, 0.325);
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+     }
+     
+     .page3 [id="b1"]::after{
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          transition: all 0.4s ease-in-out;
+          background-color:#FFA500;
+          height: 100%;
+          width: 100%;
+     }
+     .page3 [id="b1"]:hover::after{
+      top: 0;
+     }
+     .page3 [id="b1"]:hover h1{
+       color: white;
+       transform: translateX(20px);
+     }
+
+    /* PAGE 4 COMPLETE STYLING */
+    .page4{
+          min-height: 120vh;
+          width: 100vw;
+          background-color:#000000;
+          position: relative;
+          padding: 5vh 5vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+    }
+
+    .page4 .redbox{
+      position: absolute;
+      width: 60vw;
+      height: 60vh;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FE350A 0%, #ff6b3d 100%);
+      animation: float 8s ease-in-out infinite;
+      left: 20vw;
+      top: 20vh;
+      filter: blur(80px);
+      z-index: 1;
+      opacity: 0.4;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        transform: translate(30px, -30px) scale(1.1);
+      }
+    }
+
+    .page4 .text{
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding-top: 8vh;
+    }
+
+    .page4 .text h1{
+      font-size: 15vw;
+      color: #EFEAE3;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      margin-bottom: 2vh;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .page4 .content-wrapper{
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      gap: 5vw;
+      margin-top: 8vh;
+      padding: 0 2vw;
+    }
+
+    .page4 .info-section{
+      flex: 1;
+    }
+
+    .page4 .info-section h3{
+      color: #FE350A;
+      font-size: 1.2vw;
+      margin-bottom: 2vh;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .page4 .info-section p, .page4 .info-section a{
+      color: #EFEAE3;
+      font-size: 1.1vw;
+      line-height: 1.8;
+      margin-bottom: 1vh;
+      text-decoration: none;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .page4 .info-section a:hover{
+      color: #FE350A;
+      transform: translateX(10px);
+    }
+
+    .newsletter-form{
+      margin-top: 3vh;
+    }
+
+    .newsletter-form input{
+      background: transparent;
+      border: 1px solid #EFEAE3;
+      padding: 12px 20px;
+      color: #EFEAE3;
+      font-size: 1vw;
+      border-radius: 30px;
+      width: 100%;
+      margin-bottom: 1vh;
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-form input:focus{
+      outline: none;
+      border-color: #FE350A;
+    }
+
+    .newsletter-form button{
+      background: #FE350A;
+      border: none;
+      padding: 12px 40px;
+      color: white;
+      font-size: 1vw;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .newsletter-form button:hover{
+      background: #ff6b3d;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(254, 53, 10, 0.3);
+    }
+
+    .page4 .line{
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #EFEAE3, transparent);
+      margin: 5vh 0 3vh 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .page4 .footer-bottom{
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #EFEAE3;
+      font-size: 0.9vw;
+      padding: 0 2vw;
+    }
+
+    .social-links{
+      display: flex;
+      gap: 2vw;
+    }
+
+    .social-links a{
+      color: #EFEAE3;
+      text-decoration: none;
+      font-size: 1vw;
+      padding: 10px 20px;
+      border: 1px solid #EFEAE3;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover{
+      background: #EFEAE3;
+      color: #000000;
+      transform: translateY(-3px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .navbar{
+        padding: 10px 0;
+      }
+      
+      .navbar img{
+        width: 120px;
+      }
+      
+      .sect{
+        gap: 5px;
+        font-size: 14px;
+      }
+      
+      .sect h4{
+        padding: 5px 10px;
+      }
+      
+      .center{
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 20px;
+        gap: 3vh;
+      }
+      
+      .center .left{
+        width: 100%;
+        align-items: flex-start;
+      }
+      
+      .center .left h3{
+        width: 90%;
+        font-size: 5vw;
+        line-height: 6vw;
+      }
+      
+      .center .right{
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      
+      .center .right h1{
+        font-size: 15vw;
+        line-height: 15vw;
+        text-align: left;
+      }
+      
+      #move{
+        width: 70vw;
+        height: 40vh;
+        top: 60vh;
+      }
+      
+      .page1 video{
+        border-radius: 15px;
+      }
+      
+      .moving-text h1{
+        font-size: 12vw;
+      }
+      
+      #gola{
+        height: 8vw;
+        margin: 2vw 3vw;
+      }
+      
+      .lower{
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        padding: 5vh 0;
+      }
+      
+      .lower .left{
+        width: 100%;
+        padding: 0 5vw;
+      }
+      
+      .lower h1{
+        font-size: 5vh;
+        padding-left: 0;
+      }
+      
+      .lower .right{
+        width: 100%;
+        padding: 5vh 5vw;
+      }
+      
+      .right img{
+        width: 90%;
+      }
+      
+      .right p{
+        width: 90%;
+        font-size: 14px;
+      }
+      
+      #move3{
+        width: 50vh;
+        height: 45vh;
+        left: 10vw;
+      }
+      
+      .page3 h1{
+        font-size: 6vw;
+        padding-left: 20px;
+      }
+      
+      .page3 .box1, .page3 .box2, .page3 .box3, 
+      .page3 .box4, .page3 .box5, .page3 .box6{
+        height: 15vh;
+      }
+      
+      .page4{
+        padding: 3vh 5vw;
+      }
+      
+      .page4 .text{
+        padding-top: 5vh;
+      }
+      
+      .page4 .text h1{
+        font-size: 20vw;
+      }
+      
+      .page4 .content-wrapper{
+        flex-direction: column;
+        gap: 5vh;
+        margin-top: 5vh;
+      }
+      
+      .page4 .info-section h3{
+        font-size: 5vw;
+      }
+      
+      .page4 .info-section p, .page4 .info-section a{
+        font-size: 4vw;
+      }
+      
+      .newsletter-form input{
+        font-size: 4vw;
+        padding: 10px 15px;
+      }
+      
+      .newsletter-form button{
+        font-size: 4vw;
+        padding: 10px 30px;
+        width: 100%;
+      }
+      
+      .page4 .footer-bottom{
+        flex-direction: column;
+        gap: 3vh;
+        font-size: 3.5vw;
+        text-align: center;
+      }
+      
+      .social-links{
+        gap: 3vw;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .social-links a{
+        font-size: 3.5vw;
+        padding: 8px 15px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .sect{
+        font-size: 12px;
+      }
+      
+      .sect h4{
+        padding: 4px 8px;
+      }
+      
+      .center .left h3{
+        font-size: 6vw;
+        line-height: 7vw;
+      }
+      
+      .center .right h1{
+        font-size: 18vw;
+        line-height: 18vw;
+      }
+      
+      .moving-text h1{
+        font-size: 15vw;
+      }
+      
+      #gola{
+        height: 10vw;
+      }
+      
+      .lower h1{
+        font-size: 4vh;
+      }
+      
+      .page3 h1{
+        font-size: 7vw;
+      }
+      
+      .page4 .text h1{
+        font-size: 25vw;
+      }
+    }
+    </style>
+</head>
+<body>
+  <div class="main">
+    <div class="page1">
+      <div class="navbar">
+        <div class="img">
+          <img src="https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15c2_Sundown%20logo.svg" alt="Sundown Logo">
+        </div>
+        <div class="sect">
+          <h4><a href="#page3">Work</a></h4>
+          <h4><a href="#page2">Studio</a></h4>
+          <h4><a href="#page4">Contact</a></h4>
+        </div>
+      </div>
+      <div class="center">
+        <div class="left">
+          <h3>Sundown is a multi-disciplinary studio focused on creating unique, end-to-end experiences and environments.</h3>
+        </div>
+        <div class="right">
+         <h1 id="change" onclick="change()">
+          SPACES <br>
+            THAT <br>
+            INSPIRE
+          </h1>
+        </div>
+      </div>
+      <div class="shape">
+          <div id="move"></div>
+      </div>
+      <video autoplay loop muted playsinline>
+        <source src="https://player.vimeo.com/progressive_redirect/playback/911720792/rendition/1080p/file.mp4?loc=external&signature=6e5e4b2e37db8c00fb9aab23129f0b4f6e3d4d4e1dd3e4f9c8d8e4f9c8d8e4f9" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="page2" id="page2">
+      <div class="moving-text">
+        <div id="con">
+          <h1>Experiences</h1>
+          <div id="gola"></div>
+        <h1>Content</h1>
+        <div id="gola"></div>
+        <h1>Environment</h1>
+        <div id="gola"></div>
+        </div>
+        <div id="con">
+          <h1>Experiences</h1>
+          <div id="gola"></div>
+        <h1>Content</h1>
+        <div id="gola"></div>
+        <h1>Environment</h1>
+        <div id="gola"></div>
+        </div>
+        <div id="con">
+          <h1>Experiences</h1>
+          <div id="gola"></div>
+        <h1>Content</h1>
+        <div id="gola"></div>
+        <h1>Environment</h1>
+        <div id="gola"></div>
+        </div>
+      </div>
+      <div class="lower">
+        <div class="left">
+          <h1>We are a group of design-driven, goal-focused creators, producers, and designers who believe that the details make all the difference.</h1>
+          <div class="shape">
+            <div id="move3"></div>
+        </div>
+        </div>
+        <div class="right">
+          <img src="https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d1_Holding_thumb-p-500.jpg" alt="Studio Work">
+          <p>
+            We love to create, we love to solve, we love to collaborate, and we love to turn amazing ideas into reality. We're here to partner with you through every step of the process and know that relationships are the most important things we build.
+          </p>
+        </div>
+      </div>
+   </div>
+   
+   <div class="page3" id="page3">
+    <div class="box1" id="b1">
+      <h1>Makers Studio HOI</h1>
+    </div>
+    <div class="box2" id="b1">
+      <h1>50th Anniversary</h1>
+    </div>
+    <div class="box3" id="b1">
+      <h1>NYFW Popup</h1>
+    </div>
+    <div class="box4" id="b1">
+      <h1>Air Force 1 2021</h1>
+    </div>
+    <div class="box5" id="b1">
+      <h1>SOHO NYC</h1>
+    </div>
+    <div class="box6" id="b1">
+      <h1>SOHO 2023</h1>
+    </div>
+   </div>
+   
+   <div class="page4" id="page4">
+      <div class="redbox"></div>
+      
+      <div class="text">
+        <h1>Sundown</h1>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="info-section">
+          <h3>Contact</h3>
+          <a href="mailto:hello@sundown.studio">hello@sundown.studio</a>
+          <a href="tel:+1234567890">+1 (234) 567-890</a>
+          <p>123 Creative Street<br>New York, NY 10013</p>
+        </div>
+
+        <div class="info-section">
+          <h3>Follow Us</h3>
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">Twitter</a>
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">Behance</a>
+        </div>
+
+        <div class="info-section">
+          <h3>Newsletter</h3>
+          <p>Stay updated with our latest projects and insights</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="footer-bottom">
+        <p>© 2024 Sundown Studio. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+   </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> 
+<script>
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('.main'),
+    smooth: true
+});
+</script>
+
+</body>
+</html>
