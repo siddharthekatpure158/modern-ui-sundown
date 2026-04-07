@@ -1,93 +1,76 @@
 # 🌇 Sundown Studio Clone
 
-A modern, responsive, and animated frontend website inspired by the **Sundown Studio** design.
-This project showcases advanced UI/UX concepts, smooth scrolling, and creative animations using pure HTML, CSS, and JavaScript.
+A modern, responsive, and animated frontend website inspired by a creative agency design.
+This project focuses on building a premium UI experience with smooth scrolling, animations, and clean layout.
 
 ---
 
-## 🚀 Live Features
+## 🚀 Live Demo
 
-✨ Smooth scrolling using Locomotive Scroll
-✨ Modern and clean UI design
-✨ Fully responsive (Mobile + Tablet + Desktop)
-✨ Animated sections and transitions
-✨ Interactive hover effects
-✨ Video background integration
-✨ Creative typography and layout
+👉 https://siddharthekatpure158.github.io/modern-ui-sundown/
+
+---
+
+## ✨ Features
+
+* Smooth scrolling using Locomotive Scroll
+* Modern UI/UX design
+* Fully responsive (Mobile, Tablet, Desktop)
+* Animated text and hover effects
+* Video background integration
+* Creative layout with clean typography
 
 ---
 
 ## 🛠️ Tech Stack
 
 * HTML5
-* CSS3 (Advanced animations & responsive design)
+* CSS3 (Flexbox, Animations, Media Queries)
 * JavaScript
-* Locomotive Scroll Library
+* Locomotive Scroll
 
 ---
 
 ## 📂 Project Structure
 
 ```
-📁 sundown-studio-clone
+📁 modern-ui-sundown
  ┣ 📄 index.html
- ┣ 📄 style.css (if separated)
- ┣ 📄 script.js (if separated)
- ┗ 📁 assets (fonts, images, videos)
+ ┣ 📄 style.css
+ ┣ 📄 README.md
+ ┣ 📁 assets
+ ┃ ┣ 📁 fonts
+ ┃ ┣ 📁 video
+ ┃ ┗ 📁 images
 ```
 
 ---
 
-## 📸 Sections Included
+## 🎯 What I Learned
 
-* 🧭 Navbar with hover animation
-* 🎬 Hero section with video background
-* 🔁 Moving text animation section
-* 🧠 About / Studio section
-* 🧱 Work showcase section
-* 📞 Footer with contact & newsletter
-
----
-
-## 🎯 Purpose of Project
-
-This project was built to:
-
-* Practice modern frontend development
-* Improve CSS animation and layout skills
-* Understand smooth scrolling libraries
-* Build portfolio-level UI projects
-
----
-
-## ⚡ How to Run
-
-1. Clone the repository:
-
-```
-git clone https://github.com/your-username/sundown-studio-clone.git
-```
-
-2. Open the project folder
-3. Run `index.html` in your browser
+* Building responsive layouts from scratch
+* Creating smooth animations using CSS
+* Using external libraries like Locomotive Scroll
+* Structuring frontend projects professionally
 
 ---
 
 ## 📌 Future Improvements
 
-* Add backend for newsletter subscription
-* Improve accessibility (ARIA, SEO)
-* Add more interactive animations
-* Convert into React project
+* Convert project into React
+* Add GSAP animations
+* Improve performance & SEO
+* Add backend for contact/newsletter
 
 ---
 
 ## 👨‍💻 Author
 
 **Siddharth Ekatpure**
+🔗 https://github.com/siddharthekatpure158
 
 ---
 
-## ⭐ If you like this project
+## ⭐ Support
 
-Give it a ⭐ on GitHub and share it!
+If you like this project, give it a ⭐ on GitHub!
